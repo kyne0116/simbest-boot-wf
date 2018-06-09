@@ -16,7 +16,7 @@ import java.util.Map;
  * 修改人 修改日期 修改描述<br>
  * -------------------------------------------<br>
  */
-public interface IProcessTodoDataInfo {
+public interface IProcessTodoDataService {
 
     /**
      * 获取所有待办数据
@@ -48,14 +48,14 @@ public interface IProcessTodoDataInfo {
 
     /**
      * 获取所有待办的状态
-     * @param todoStateParam
+     * @param todoStateParam        查询待办参数
      * @return
      */
     Collection<?> getAllTodoState(Map<? extends Object,? extends Object> todoStateParam);
 
     /**
      *  获取所有已办的状态
-     * @param doneStateParam
+     * @param doneStateParam        查询已办参数
      * @return
      */
     Collection<?> getAllDoneState(Map<? extends Object,? extends Object> doneStateParam);
