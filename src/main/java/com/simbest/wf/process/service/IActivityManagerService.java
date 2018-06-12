@@ -1,7 +1,7 @@
 package com.simbest.wf.process.service;
 
 /**
- * <strong>Title : IActivityService</strong><br>
+ * <strong>Title : IActivityService </strong><br>
  * <strong>Description : 流程活动控制操作接口<br>
  *         用户流程活动回退等操作
  * </strong>
