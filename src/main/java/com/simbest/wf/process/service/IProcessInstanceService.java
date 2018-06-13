@@ -1,6 +1,5 @@
 package com.simbest.wf.process.service;
 
-import java.util.Collection;
 import java.util.Map;
 
 /**
@@ -40,7 +39,7 @@ public interface IProcessInstanceService {
      * @param param                 相关数据键值对
      * @return
      */
-    Collection<?> startProcessAndSetRelativeData( String processDefName, String processInstName, String processInstDesc, boolean transcationSpan, Map<String,Object> param);
+    long startProcessAndSetRelativeData( String processDefName, String processInstName, String processInstDesc, boolean transcationSpan, Map<String,Object> param);
 
 
     /**
