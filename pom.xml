@@ -162,8 +162,7 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven-deploy-plugin.version}</version>
                     <configuration>
-                        <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo
-                        </altDeploymentRepository>
+                        <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
                     </configuration>
                 </plugin>
                 <plugin>
