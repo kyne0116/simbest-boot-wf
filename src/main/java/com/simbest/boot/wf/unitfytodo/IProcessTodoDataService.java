@@ -1,4 +1,4 @@
-package com.simbest.wf.unitfytodo;
+package com.simbest.boot.wf.unitfytodo;
 
 import java.util.Collection;
 import java.util.Map;
@@ -23,40 +23,40 @@ public interface IProcessTodoDataService {
      * @param todoParam   查询待办参数
      * @return
      */
-    Collection<?> getAllTodo( Map<? extends Object,? extends Object> todoParam);
+    Collection<?> getAllTodo ( Map<? extends Object, ? extends Object> todoParam );
 
     /**
      * 获取所有已办数据
      * @param doneParam    查询已办参数
      * @return
      */
-    Collection<?> getAllReadyDone(Map<? extends Object,? extends Object> doneParam);
+    Collection<?> getAllReadyDone ( Map<? extends Object, ? extends Object> doneParam );
 
     /**
      * 获取指定 userName 下面所有的待办数据
      * @param todoUserParam        查询待办参数
      * @return
      */
-    Collection<?> getTodoByUserName(Map<? extends Object,? extends Object> todoUserParam);
+    Collection<?> getTodoByUserName ( Map<? extends Object, ? extends Object> todoUserParam );
 
     /**
      * 获取指定 userName 下面所有的已办数据
      * @param doneUserParam         查询已办参数
      * @return
      */
-    Collection<?> getAreadyDoneByUserId(Map<? extends Object,? extends Object> doneUserParam);
+    Collection<?> getAreadyDoneByUserId ( Map<? extends Object, ? extends Object> doneUserParam );
 
     /**
      * 获取所有待办的状态
      * @param todoStateParam        查询待办参数
      * @return
      */
-    Collection<?> getAllTodoState(Map<? extends Object,? extends Object> todoStateParam);
+    Collection<?> getAllTodoState ( Map<? extends Object, ? extends Object> todoStateParam );
 
     /**
      *  获取所有已办的状态
      * @param doneStateParam        查询已办参数
      * @return
      */
-    Collection<?> getAllDoneState(Map<? extends Object,? extends Object> doneStateParam);
+    Collection<?> getAllDoneState ( Map<? extends Object, ? extends Object> doneStateParam );
 }

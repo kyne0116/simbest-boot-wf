@@ -1,4 +1,4 @@
-package com.simbest.wf.login;
+package com.simbest.boot.wf.login;
 
 import java.util.Map;
 
@@ -23,5 +23,5 @@ public interface WorkFlowBpsLoginService {
      * BPS流程引擎登录操作
      * @param param
      */
-    void bpsLogin( Map<? extends Object,? extends Object> param);
+    void bpsLogin ( Map<? extends Object, ? extends Object> param );
 }

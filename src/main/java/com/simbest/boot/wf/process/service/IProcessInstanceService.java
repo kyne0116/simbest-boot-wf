@@ -1,4 +1,4 @@
-package com.simbest.wf.process.service;
+package com.simbest.boot.wf.process.service;
 
 import java.util.Map;
 
@@ -28,7 +28,7 @@ public interface IProcessInstanceService {
      * @param param                 相关数据键值对
      * @return
      */
-    long startProcessAndSetRelativeDataNormal( String processDefName, String processInstName, String processInstDesc, boolean transcationSpan, Map<String,Object> param);
+    long startProcessAndSetRelativeDataNormal ( String processDefName, String processInstName, String processInstDesc, boolean transcationSpan, Map<String, Object> param );
 
     /**
      * 启动流程并设置相关数据
@@ -39,7 +39,7 @@ public interface IProcessInstanceService {
      * @param param                 相关数据键值对
      * @return
      */
-    long startProcessAndSetRelativeData( String processDefName, String processInstName, String processInstDesc, boolean transcationSpan, Map<String,Object> param);
+    long startProcessAndSetRelativeData ( String processDefName, String processInstName, String processInstDesc, boolean transcationSpan, Map<String, Object> param );
 
 
     /**
@@ -50,7 +50,7 @@ public interface IProcessInstanceService {
      * @param transcationSpan       是否分割事务 true开启，false关闭
      * @return
      */
-    long startProcessAndTran (String processDefName, String processInstName, String processInstDesc, boolean transcationSpan);
+    long startProcessAndTran ( String processDefName, String processInstName, String processInstDesc, boolean transcationSpan );
 
     /**
      * 启动流程不设置相关数据
@@ -59,6 +59,6 @@ public interface IProcessInstanceService {
      * @param processInstDesc       流程实例描述
      * @return
      */
-    long startProcess (String processDefName, String processInstName, String processInstDesc);
+    long startProcess ( String processDefName, String processInstName, String processInstDesc );
 
 }

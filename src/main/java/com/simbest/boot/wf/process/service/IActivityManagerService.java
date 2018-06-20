@@ -1,4 +1,4 @@
-package com.simbest.wf.process.service;
+package com.simbest.boot.wf.process.service;
 
 /**
  * <strong>Title : IActivityService </strong><br>
@@ -28,5 +28,5 @@ public interface IActivityManagerService {
      *                                      one_step 单步回退
      *                                      simple 简单回退
      */
-    boolean backProcessActivityByWorkItemId(Long currentWorkItemID,String destActDefID,String rollBackStrategy);
+    boolean backProcessActivityByWorkItemId ( Long currentWorkItemID, String destActDefID, String rollBackStrategy );
 }

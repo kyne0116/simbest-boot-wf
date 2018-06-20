@@ -1,4 +1,4 @@
-package com.simbest.wf.process.service;
+package com.simbest.boot.wf.process.service;
 
 import java.util.Map;
 
@@ -25,12 +25,12 @@ public interface IWorkItemService {
      * @param param                 流程相关数据
      * @param transactionSpan       是否启用分割事务 true:启用 false:不启用
      */
-    void finishWorkItemWithRelativeData( long workItemId, Map<String,Object> param,boolean transactionSpan);
+    void finishWorkItemWithRelativeData ( long workItemId, Map<String, Object> param, boolean transactionSpan );
 
     /**
      * 提交流程审批意见
      * @param workItemId            工作项ID
      * @param approvalMsg           审批意见信息
      */
-    void submitApprovalMsg(long workItemId,String approvalMsg);
+    void submitApprovalMsg ( long workItemId, String approvalMsg );
 }
