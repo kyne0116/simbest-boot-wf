@@ -33,4 +33,11 @@ public interface IWorkItemService {
      * @param approvalMsg           审批意见信息
      */
     void submitApprovalMsg ( long workItemId, String approvalMsg );
+
+    /**
+     * 根据流程实例ID查询工作项信息
+     * @param processInsId        流程实例ID
+     * @return
+     */
+    Object queryWorkTtemDataByProInsId(long processInsId);
 }
