@@ -15,16 +15,5 @@ package com.simbest.boot.wf.process.service;
  */
 public interface IWfOptMsgService {
 
-    /**
-     * 根据流程实例ID和流程标题更新流程审批意见
-     * @param processInstID
-     * @param title
-     */
-    void updateTitleByProInstID ( Long processInstID, String title );
 
-    /**
-     * 根据流程实例ID 删除BPS流程审批意见
-     * @param processInstID    流程实例ID
-     */
-    void deleteByProInstID ( Long processInstID );
 }
