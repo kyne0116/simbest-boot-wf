@@ -1,5 +1,7 @@
 package com.simbest.boot.wf.process.service;
 
+import java.util.List;
+
 /**
  * <strong>Title : IWfOptMsgService</strong><br>
  * <strong>Description : 流程审批意见接口</strong><br>
@@ -15,5 +17,11 @@ package com.simbest.boot.wf.process.service;
  */
 public interface IWfOptMsgService {
 
+    /**
+     * 根据流程实例ID查询流程审批意见信息
+     * @param processInId       流程实例ID
+     * @return
+     */
+    List<?> getByProInsIdOptMsgs( Long processInId );
 
 }
