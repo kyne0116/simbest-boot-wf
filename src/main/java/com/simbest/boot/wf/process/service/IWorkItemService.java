@@ -1,5 +1,6 @@
 package com.simbest.boot.wf.process.service;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,10 +36,18 @@ public interface IWorkItemService {
     void submitApprovalMsg ( long workItemId, String approvalMsg );
 
     /**
+     * 根据流程实例ID，流程活动实例ID，查询流程工作项信息
+     * @param processInstID     流程实例ID
+     * @param activityDefID    流程活动定义ID
+     * @return
+     */
+    Object getByProInstIdAAndAInstId ( Long processInstID, String activityDefID );
+
+    /**
      * 根据流程实例ID查询工作项信息
      * @param processInsId        流程实例ID
      * @return
      */
-    Object queryWorkTtemDataByProInsId(long processInsId);
+    List<?> queryWorkTtemDataByProInsId ( long processInsId );
 
 }
