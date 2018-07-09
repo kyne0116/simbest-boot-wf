@@ -50,4 +50,12 @@ public interface IWorkItemService {
      */
     List<?> queryWorkTtemDataByProInsId ( long processInsId );
 
+
+    /**
+     * 根据流程实例ID 删除工作项信息
+     * @param processInstID  流程实例ID
+     * @return
+     */
+    int deleteByProInsId ( Long processInstID );
+
 }
