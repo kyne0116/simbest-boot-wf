@@ -54,14 +54,14 @@ public interface IProcessTodoDataService {
      * @param todoUserParam        查询待办参数
      * @return
      */
-    Page<?> getTodoByUserNamePage ( Map<? extends Object, ? extends Object> todoUserParam,Pageable pageable );
+    Map<String, Page<?>> getTodoByUserNamePage ( Map<? extends Object, ? extends Object> todoUserParam,Pageable pageable );
 
     /**
      * 获取指定 userName 下面所有的已办数据
      * @param doneUserParam         查询已办参数
      * @return
      */
-    Page<?> getAreadyDoneByUserIdPage ( Map<? extends Object, ? extends Object> doneUserParam,Pageable pageable );
+    Map<String, Page<?>> getAreadyDoneByUserIdPage ( Map<? extends Object, ? extends Object> doneUserParam,Pageable pageable );
 
     /**
      * 获取所有待办的状态
