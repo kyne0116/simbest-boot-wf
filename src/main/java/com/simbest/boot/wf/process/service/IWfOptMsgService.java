@@ -24,4 +24,11 @@ public interface IWfOptMsgService {
      */
     List<?> getByProInsIdOptMsgs( Long processInId );
 
+    /**
+     * 根据流程实例ID删除本地流程实例信息
+     * @param processInstID         流程实例ID
+     * @return
+     */
+    int deleteLocalDataByProInsId(long processInstID);
+
 }
