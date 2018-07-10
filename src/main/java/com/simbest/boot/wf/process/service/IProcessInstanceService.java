@@ -62,10 +62,17 @@ public interface IProcessInstanceService {
     long startProcess ( String processDefName, String processInstName, String processInstDesc );
 
     /**
-     * 根据流程实例ID删除流程实例信息
+     * 根据流程实例ID删除BPS流程引擎流程实例信息
      * @param processInstID         流程实例ID
      * @return
      */
     int deleteProcessInstance(long processInstID);
+
+    /**
+     * 根据流程实例ID删除本地流程实例信息
+     * @param processInstID         流程实例ID
+     * @return
+     */
+    int deleteLocalDataByProInsId(long processInstID);
 
 }
