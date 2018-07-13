@@ -76,4 +76,11 @@ public interface IProcessTodoDataService {
      * @return
      */
     Collection<?> getAllDoneState ( Map<? extends Object, ? extends Object> doneStateParam );
+
+    /**
+     * 获取指定 userName 下面所有的创建的工单数据
+     * @param userParam         userId
+     * @return
+     */
+    Page<?> getMyCreateDataPage ( Map<? extends Object, ? extends Object> userParam, Pageable pageable );
 }
