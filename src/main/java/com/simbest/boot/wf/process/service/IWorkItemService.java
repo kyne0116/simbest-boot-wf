@@ -58,4 +58,11 @@ public interface IWorkItemService {
      */
     int deleteByProInsId ( Long processInstID );
 
+    /**
+     * 根据流程实例ID和环节定义ID更新工作项状态信息
+     * @param processInstId             流程实例ID
+     * @param activityDefId             环节定义ID
+     * @return
+     */
+    int updateEnabledByProInsIdAndActivityDefId(Long processInstId,String activityDefId);
 }
