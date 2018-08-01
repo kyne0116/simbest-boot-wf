@@ -26,14 +26,14 @@ public interface IWorkItemService {
      * @param param                 流程相关数据
      * @param transactionSpan       是否启用分割事务 true:启用 false:不启用
      */
-    void finishWorkItemWithRelativeData ( long workItemId, Map<String, Object> param, boolean transactionSpan );
+    int finishWorkItemWithRelativeData ( long workItemId, Map<String, Object> param, boolean transactionSpan );
 
     /**
      * 提交流程审批意见
      * @param workItemId            工作项ID
      * @param approvalMsg           审批意见信息
      */
-    void submitApprovalMsg ( long workItemId, String approvalMsg );
+    int submitApprovalMsg ( long workItemId, String approvalMsg );
 
     /**
      * 根据流程实例ID，流程活动实例ID，查询流程工作项信息
@@ -65,4 +65,8 @@ public interface IWorkItemService {
      * @return
      */
     int updateEnabledByProInsIdAndActivityDefId(Long processInstId,String activityDefId);
+
+
+    void finishWorkItem(long workItemID, boolean transactionSpan);
+
 }
