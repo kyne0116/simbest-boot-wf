@@ -64,6 +64,13 @@ public interface IProcessTodoDataService {
     Page<?> getAreadyDoneByUserIdPage ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
 
     /**
+     * 获取指定 userName 下面所有的已办数据 存在子流程
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    Page<?> getAreadyDoneByUserIdSubFlowPage ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
+
+    /**
      * 获取所有待办的状态
      * @param todoStateParam        查询待办参数
      * @return

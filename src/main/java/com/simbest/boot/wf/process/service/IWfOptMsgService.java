@@ -18,11 +18,18 @@ import java.util.List;
 public interface IWfOptMsgService {
 
     /**
-     * 根据流程实例ID查询流程审批意见信息
+     * 根据流程实例ID查询流程审批意见信息  流程审批意见
      * @param processInId       流程实例ID
      * @return
      */
     List<?> getByProInsIdOptMsgs( Long processInId );
+
+    /**
+     * 根据流程实例ID查询流程审批意见信息 存在子流程   流程审批意见
+     * @param parentProcessInId       父流程实例ID
+     * @return
+     */
+    List<?> getByProInsIdOptMsgsSubFlow( Long parentProcessInId );
 
     /**
      * 根据流程实例ID删除本地流程实例信息

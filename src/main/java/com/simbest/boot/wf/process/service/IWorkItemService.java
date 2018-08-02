@@ -44,13 +44,18 @@ public interface IWorkItemService {
     Object getByProInstIdAAndAInstId ( Long processInstID, String activityDefID );
 
     /**
-     * 根据流程实例ID查询工作项信息
+     * 根据流程实例ID查询工作项信息  流程跟踪
      * @param processInsId        流程实例ID
      * @return
      */
     List<?> queryWorkTtemDataByProInsId ( long processInsId );
 
-
+    /**
+     * 根据流程实例ID查询工作项信息 存在子流程  流程跟踪
+     * @param parentProcessInsId        父流程实例ID
+     * @return
+     */
+    List<?> queryWorkTtemDataByProInsIdSubFlow ( long parentProcessInsId );
     /**
      * 根据流程实例ID 删除工作项信息
      * @param processInstID  流程实例ID
