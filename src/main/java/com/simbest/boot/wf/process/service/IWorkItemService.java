@@ -69,4 +69,10 @@ public interface IWorkItemService {
 
     void finishWorkItem(long workItemID, boolean transactionSpan);
 
+    /**
+     * 根据工作项Id查询工作项信息
+     * @param workItemId    工作项Id
+     * @return
+     */
+    Object getWorkItemByWorkItemId(long workItemId);
 }
