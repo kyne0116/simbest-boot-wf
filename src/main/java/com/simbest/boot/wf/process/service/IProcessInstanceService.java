@@ -1,5 +1,6 @@
 package com.simbest.boot.wf.process.service;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -74,5 +75,12 @@ public interface IProcessInstanceService {
      * @return
      */
     int deleteLocalDataByProInsId(long processInstID);
+
+    /**
+     * 根据父流程实例ID查询业务流程状态数据
+     * @param parentProcessInstID  父流程实例ID
+     * @return
+     */
+    List<? extends Object> getByParentProcId ( Long parentProcessInstID );
 
 }
