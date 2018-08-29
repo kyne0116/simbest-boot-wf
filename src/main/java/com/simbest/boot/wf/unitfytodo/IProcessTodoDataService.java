@@ -90,4 +90,20 @@ public interface IProcessTodoDataService {
      * @return
      */
     Page<?> getMyCreateDataPage ( Map<? extends Object, ? extends Object> userParam, Pageable pageable );
+
+    /**
+     * 获取指定userName下面待阅数据
+     * @param paramMap          查询待阅参数
+     * @param pageable          分页参数
+     * @return
+     */
+    Page<?> getMyTodoReadByUserNamePage(Map<? extends Object, ? extends Object> paramMap,Pageable pageable);
+
+    /**
+     * 获取指定userName下面已阅数据
+     * @param paramMap          查询已阅参数
+     * @param pageable          分页参数
+     * @return
+     */
+    Page<?> getMyAreadyReadByUserNamePage(Map<? extends Object, ? extends Object> paramMap,Pageable pageable);
 }
