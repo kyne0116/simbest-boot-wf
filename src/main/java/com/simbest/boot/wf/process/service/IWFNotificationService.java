@@ -102,4 +102,12 @@ public interface IWFNotificationService {
      * @return
      */
     List<?> getWFNotificationInstListByProcessInstId(Long processInstId);
+
+    /**
+     * 根据主单据ID、抄送人和状态查询通知数据
+     * @param pmInstId              主单据ID
+     * @param recipient             抄送人
+     * @return
+     */
+    Object getNotificationByPmInsIdAndRecipient ( Long pmInstId, String recipient );
 }
