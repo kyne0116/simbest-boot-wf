@@ -109,5 +109,5 @@ public interface IWFNotificationService {
      * @param recipient             抄送人
      * @return
      */
-    Object getNotificationByPmInsIdAndRecipient ( Long pmInstId, String recipient );
+    Object getNotificationByPmInsIdAndRecipient ( String pmInstId, String recipient );
 }
