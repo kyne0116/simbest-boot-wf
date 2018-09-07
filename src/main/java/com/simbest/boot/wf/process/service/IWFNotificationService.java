@@ -117,4 +117,11 @@ public interface IWFNotificationService {
      * @param content              意见
      */
     int updateNotifiContentEndActivity ( String notificationId, String content );
+
+    /**
+     * 根据主键Id查询通知实体
+     * @param notificationId                   主键ID
+     * @return
+     */
+    Object getWFNotificationById(String notificationId);
 }
