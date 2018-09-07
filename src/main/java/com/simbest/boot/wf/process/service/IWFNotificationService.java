@@ -110,4 +110,11 @@ public interface IWFNotificationService {
      * @return
      */
     Object getNotificationByPmInsIdAndRecipient ( String pmInstId, String recipient );
+
+    /**
+     * 根据ID根据最后环节已阅的的意见
+     * @param notificationId       通知ID
+     * @param content              意见
+     */
+    int updateNotifiContentEndActivity ( String notificationId, String content );
 }
