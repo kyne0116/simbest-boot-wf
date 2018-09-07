@@ -85,9 +85,10 @@ public interface IWFNotificationService {
      * 根据ID更新待阅/已阅状态
      * @param notificationId        通知实体ID
      * @param status                通知状态
+     * @param content               意见
      * @return
      */
-    int updateNotificationStatus(String notificationId,String status);
+    int updateNotificationStatus(String notificationId,String status,String content);
 
     /**
      * 根据ID删除通知数据
