@@ -106,4 +106,12 @@ public interface IProcessTodoDataService {
      * @return
      */
     Page<?> getMyAreadyReadByUserNamePage(Map<? extends Object, ? extends Object> paramMap,Pageable pageable);
+
+    /**
+     * 查询业务系统中所有正在办理的工单数据   综合流程管理平台调用接口
+     * @param paramMap          查询参数
+     * @param pageable          分页参数
+     * @return
+     */
+    Page<Map<String,Object>> getAllTodoByManagerPage(Map<? extends Object, ? extends Object> paramMap,Pageable pageable);
 }
