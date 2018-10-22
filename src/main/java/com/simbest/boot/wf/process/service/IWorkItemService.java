@@ -80,4 +80,10 @@ public interface IWorkItemService {
      * @return
      */
     Object getWorkItemByWorkItemId(long workItemId);
+
+    /**
+     * 根据工作项状态和有效状态查询所有处于运行状态的工作项信息
+     * @return
+     */
+    List<?> queryAllByCurrentStateAndeAndEnabledNative ();
 }
