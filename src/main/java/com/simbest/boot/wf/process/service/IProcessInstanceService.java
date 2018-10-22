@@ -83,4 +83,11 @@ public interface IProcessInstanceService {
      */
     List<? extends Object> getByParentProcId ( Long parentProcessInstID );
 
+    /**
+     * 根据业务主键更新流程状态表中的工单标题
+     * @param businessKey           业务主键
+     * @param title                 工单标题
+     * @return
+     */
+    int updateTitleByBusinessKey ( String businessKey, String title );
 }
