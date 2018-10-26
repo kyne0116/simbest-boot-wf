@@ -19,8 +19,8 @@ public interface IActivityManagerService {
 
     /**
      * 根据回退策略和当前工作项进行流程回退
-     * @param currentWorkItemID         当前环节工作项ID
-     * @param destActDefID              回退到的目标活动定义ID，将根据此活动定义ID查找最新的活动实例进行回退
+     * @param currWorkItemID         当前环节工作项ID
+     * @param destWorkItemID              回退到的目标活动定义ID，将根据此活动定义ID查找最新的活动实例进行回退
      * @param rollBackStrategy          回退策略 回退策略类型(目前BPS引擎需要)
      *                                      time 基于两点间的时间回退
      *                                      path 基于两点间的路径回退
@@ -28,5 +28,5 @@ public interface IActivityManagerService {
      *                                      one_step 单步回退
      *                                      simple 简单回退
      */
-    boolean backProcessActivityByWorkItemId ( Long currentWorkItemID, String destActDefID, String rollBackStrategy );
+    boolean backProcessActivityByWorkItemId ( Long currWorkItemID, Long destWorkItemID, String rollBackStrategy );
 }
