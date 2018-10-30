@@ -90,4 +90,11 @@ public interface IProcessInstanceService {
      * @return
      */
     int updateTitleByBusinessKey ( String businessKey, String title );
+
+    /**
+     *  根据流程实例ID查询流程跟踪信息
+     *
+     * @param processInstId         流程实例ID
+     */
+    List<Map<String, Object>> getProInstDataByProInstIdLocal(Long processInstId);
 }
