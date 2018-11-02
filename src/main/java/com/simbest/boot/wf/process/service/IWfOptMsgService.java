@@ -1,6 +1,7 @@
 package com.simbest.boot.wf.process.service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <strong>Title : IWfOptMsgService</strong><br>
@@ -38,4 +39,18 @@ public interface IWfOptMsgService {
      */
     int deleteLocalDataByProInsId(long processInstID);
 
+     /**
+     * 根据流程实例ID和工作项ID 查询审批意见数据
+     * @param processInId           流程实例ID
+     * @param workItemId            工作项ID
+     * @return
+     */
+     Object getOneData(Long processInId, Long workItemId);
+
+    /**
+     * 更新流程审批意见
+     * @param workItemMsg       要修改的数据
+     * @return
+     */
+     Object updateWorkOptMstInfo( Map<String,Object> workItemMsg );
 }

@@ -76,14 +76,22 @@ public interface IWorkItemService {
 
     /**
      * 根据工作项Id查询工作项信息
-     * @param workItemId    工作项Id
+     * @param processInsId      流程实例ID
+     * @param workItemId        工作项Id
      * @return
      */
-    Object getWorkItemByWorkItemId(long workItemId);
+    Object getWorkItemByWorkItemId(Long processInsId,Long workItemId);
 
     /**
      * 根据工作项状态和有效状态查询所有处于运行状态的工作项信息
      * @return
      */
     List<?> queryAllByCurrentStateAndeAndEnabledNative ();
+
+    /**
+     * 更新流程跟踪信息
+     * @param workItem          流程工作项参数
+     * @return
+     */
+    Object updateWorkItemInfo(Map<String,Object> workItem);
 }
