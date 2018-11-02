@@ -97,4 +97,19 @@ public interface IProcessInstanceService {
      * @param processInstId         流程实例ID
      */
     List<Map<String, Object>> getProInstDataByProInstIdLocal(Long processInstId);
+
+    /**
+     * 注销流程 逻辑删除,注销后的流程不能恢复
+     * @param processInstId          流程实例ID
+     * @return
+     */
+    int cancelProcessInst(Long processInstId);
+
+    /**
+     * 终止流程
+     *     实际是把当前正在运行的工作项状态变为终止状态（13），在已办中可以正常查询到
+     * @param processInstId
+     * @return
+     */
+    int terminateProcessInst(Long processInstId);
 }
