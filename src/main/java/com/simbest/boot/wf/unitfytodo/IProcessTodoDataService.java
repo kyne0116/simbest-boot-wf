@@ -29,6 +29,13 @@ public interface IProcessTodoDataService {
     Collection<?> getAllTodo ( Map<? extends Object, ? extends Object> todoParam );
 
     /**
+     * 分页获取所有待办数据
+     * @param todoParam   查询待办参数
+     * @return
+     */
+    Page<Map<String,Object>> getAllTodoPage ( Map<? extends Object, ? extends Object> todoParam, Pageable pageable );
+
+    /**
      * 获取所有已办数据
      * @param doneParam    查询已办参数
      * @return
