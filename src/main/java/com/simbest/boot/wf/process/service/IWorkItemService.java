@@ -51,7 +51,14 @@ public interface IWorkItemService {
     List<?> queryWorkTtemDataByProInsId ( long processInsId );
 
     /**
-     * 根据流程实例ID查询工作项信息 存在子流程  流程跟踪
+     * 根据流程实例ID查询工作项信息  流程跟踪
+     * @param paramMap      参数
+     * @return
+     */
+    List<Map<String,Object>> queryWorkITtemDataMap ( Map<String,Object> paramMap);
+
+    /**
+     * 根据流程实例ID查询工作项信息(包含主流程和所有子流程数据)  流程跟踪
      * @param parentProcessInsId        父流程实例ID
      * @return
      */
@@ -84,7 +91,6 @@ public interface IWorkItemService {
 
     /**
      * 根据工作项Id查询工作项信息
-     * @param processInsId      流程实例ID
      * @param workItemId        工作项Id
      * @return
      */
