@@ -26,6 +26,13 @@ public interface IWfOptMsgService {
     List<?> getByProInsIdOptMsgs( Long processInId );
 
     /**
+     * 根据流程实例ID查询流程审批意见信息（包含主流程和当前参与的所有子流程数据）   供流程审批意见查询使用
+     * @param paramMap    参数
+     * @return
+     */
+    List<Map<String, Object>> queryProcessOptMsgDataMap ( Map<String, Object> paramMap );
+
+    /**
      * 根据流程实例ID查询流程审批意见信息 存在子流程   流程审批意见
      * @param parentProcessInId       父流程实例ID
      * @return
