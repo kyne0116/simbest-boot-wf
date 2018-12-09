@@ -29,6 +29,12 @@ public interface IWorkItemService {
     int finishWorkItemWithRelativeData ( long workItemId, Map<String, Object> param, boolean transactionSpan );
 
     /**
+     * 完成指定工作项并携带流程相关数据（提交下一步）
+     * @param param                 流程相关数据
+     */
+    int finishWorkTaskWithRelativeData ( Map<String, Object> param);
+
+    /**
      * 提交流程审批意见
      * @param workItemId            工作项ID
      * @param approvalMsg           审批意见信息
@@ -108,4 +114,17 @@ public interface IWorkItemService {
      * @return
      */
     Object updateWorkItemInfo(Map<String,Object> workItem);
+
+    /**
+     * 根据当前操作人查询工作任务
+     * @param queryParam        流程任务查询
+     * @return
+     */
+    List<?> queryPorcessWorkTask(Map<String,Object> queryParam);
+
+    /**
+     * 根据工作任务ID结束流程
+     * @param processParam      参数
+     */
+    void endProcess(Map<String,Object> processParam);
 }

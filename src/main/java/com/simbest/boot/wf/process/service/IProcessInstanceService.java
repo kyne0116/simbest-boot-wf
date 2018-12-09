@@ -1,5 +1,6 @@
 package com.simbest.boot.wf.process.service;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -63,6 +64,20 @@ public interface IProcessInstanceService {
     long startProcess ( String processDefName, String processInstName, String processInstDesc );
 
     /**
+     * 启动流程并进行流程部署
+     * @param startParam            流程参数
+     * @return
+     */
+    Map<String,Object> startProcessAndDeployProcessAndNoSetRelativeData(Map<String,Object> startParam);
+
+    /**
+     * 启动流程并进行流程部署和根据流程参数进行启动流程实例
+     * @param startParam            流程参数
+     * @return
+     */
+    Map<String,Object> startProcessAndDeployProcessAndSetRelativeData(Map<String,Object> startParam);
+
+    /**
      * 根据流程实例ID删除BPS流程引擎流程实例信息
      * @param processInstID         流程实例ID
      * @return
@@ -108,8 +123,15 @@ public interface IProcessInstanceService {
     /**
      * 终止流程
      *     实际是把当前正在运行的工作项状态变为终止状态（13），在已办中可以正常查询到
-     * @param processInstId
+     * @param processInstId         流程实例ID
      * @return
      */
     int terminateProcessInst(Long processInstId);
+
+    /**
+     * 根据流程ID查询流程图片，并返回页面
+     * @param processInstanceId     流程实例ID
+     * @return
+     */
+    InputStream getDiagram( String processInstanceId);
 }
