@@ -121,4 +121,11 @@ public interface IProcessTodoDataService {
      * @return
      */
     Page<Map<String,Object>> getAllTodoByManagerPage(Map<? extends Object, ? extends Object> paramMap,Pageable pageable);
+
+    /**
+     * 根据主单据中的pmInstId查询流程业务操作数据
+     * @param pmInsId       主单据中的pmInstId
+     * @return
+     */
+     Object queryActBusinessStatusByPmInstId ( String pmInsId )throws Exception;
 }
