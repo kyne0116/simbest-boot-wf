@@ -60,4 +60,12 @@ public interface IWfOptMsgService {
      * @return
      */
      Object updateWorkOptMstInfo( Map<String,Object> workItemMsg );
+
+    /**
+     * 根据流程实例ID和目标工作项ID把目标工作项之后所有的审批意见修改无效状态，wfmg回退功能使用
+     * @param processInstId     流程实例ID
+     * @param workItemId        目标工作项ID
+     * @return
+     */
+     int updateOptMsgByProInsIdWorkItemId ( Long processInstId, Long workItemId );
 }

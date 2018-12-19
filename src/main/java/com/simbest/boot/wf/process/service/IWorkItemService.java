@@ -135,4 +135,12 @@ public interface IWorkItemService {
      * @param processParam      参数
      */
     void endProcess(Map<String,Object> processParam);
+
+    /**
+     * 根据流程实例ID和目标工作项ID把目标工作项之后所有的流程跟踪修改无效状态，wfmg回退功能使用
+     * @param processInstId     流程实例ID
+     * @param workItemId        目标工作项ID
+     * @return
+     */
+    int updateOptMsgByProInsIdWorkItemId ( Long processInstId, Long workItemId );
 }
