@@ -4,6 +4,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -78,6 +79,13 @@ public interface IProcessTodoDataService {
     Page<?> getAreadyDoneByUserIdSubFlowPage ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
 
     /**
+     * 获取指定 userName 下面所有的已办数据 存在子流程(返回为Map类型)
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    Page<Map<String,Object>> getAreadyDoneByUserIdPageMap ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
+
+    /**
      * 获取所有待办的状态
      * @param todoStateParam        查询待办参数
      * @return
@@ -128,4 +136,11 @@ public interface IProcessTodoDataService {
      * @return
      */
      Object queryActBusinessStatusByPmInstId ( String pmInsId )throws Exception;
+
+    /**
+     * 根据流程实例ID查询流程业务操作数据，可以会出现多条数据挂载一个businessKey（目前网络割接在用）
+     * @param processInstId    流程实例ID
+     * @return
+     */
+    List<?> queryActBusinessStatusByProInsId( Long processInstId)throws Exception;
 }
