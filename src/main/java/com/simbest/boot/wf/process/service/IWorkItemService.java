@@ -57,6 +57,14 @@ public interface IWorkItemService {
     List<?> queryWorkTtemDataByProInsId ( long processInsId );
 
     /**
+     * 根据流程实例ID查询流程跟踪(wfmg在用)
+     * @param processInstId     流程实例ID
+     * @param workItemId        工作项ID
+     * @return
+     */
+    List<?> queryWorkItems( long processInstId,long workItemId );
+
+    /**
      * 根据流程实例ID查询工作项信息  流程跟踪
      * @param paramMap      参数
      * @return
