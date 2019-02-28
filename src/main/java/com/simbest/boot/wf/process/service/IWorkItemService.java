@@ -42,6 +42,14 @@ public interface IWorkItemService {
     int submitApprovalMsg ( long workItemId, String approvalMsg );
 
     /**
+     * 将工作项改派给指定的参与者，可以改派给多个个人
+     * @param workItemId            工作项ID
+     * @param reassignUsers         改派的人
+     * @return
+     */
+    int reassignWorkItem(long workItemId,List<Object> reassignUsers);
+
+    /**
      * 根据流程实例ID，流程活动实例ID，查询流程工作项信息
      * @param processInstID     流程实例ID
      * @param activityDefID    流程活动定义ID
