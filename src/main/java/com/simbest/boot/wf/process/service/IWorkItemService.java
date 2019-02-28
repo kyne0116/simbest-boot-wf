@@ -26,7 +26,7 @@ public interface IWorkItemService {
      * @param param                 流程相关数据
      * @param transactionSpan       是否启用分割事务 true:启用 false:不启用
      */
-    int finishWorkItemWithRelativeData ( long workItemId, Map<String, Object> param, boolean transactionSpan );
+    long finishWorkItemWithRelativeData ( long workItemId, Map<String, Object> param, boolean transactionSpan );
 
     /**
      * 完成指定工作项并携带流程相关数据（提交下一步）
