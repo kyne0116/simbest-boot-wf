@@ -3,6 +3,7 @@ package com.simbest.boot.wf.process.service;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * <strong>Title : IProcessInstanceService</strong><br>
@@ -92,6 +93,13 @@ public interface IProcessInstanceService {
     int deleteLocalDataByProInsId(long processInstID);
 
     /**
+     * 根据流程实例ID删除流程
+     * @param delParam      参数
+     * @return
+     */
+    int deleteProcessInstance(Map<String,Object> delParam);
+
+    /**
      * 根据父流程实例ID查询业务流程状态数据
      * @param parentProcessInstID  父流程实例ID
      * @return
@@ -121,6 +129,13 @@ public interface IProcessInstanceService {
     int cancelProcessInst(Long processInstId);
 
     /**
+     * 注销流程 逻辑删除,注销后的流程不能恢复
+     * @param proParam          参数
+     * @return
+     */
+    int cancelProcessInst(Map<String,Object> proParam);
+
+    /**
      * 终止流程
      *     实际是把当前正在运行的工作项状态变为终止状态（13），在已办中可以正常查询到
      * @param processInstId         流程实例ID
@@ -134,4 +149,38 @@ public interface IProcessInstanceService {
      * @return
      */
     InputStream getDiagram( String processInstanceId);
+
+    /**
+     * 根据流程实例ID查询流程实例信息  多个
+     * @param processInstIds    流程实例ID
+     * @return
+     */
+    List<? extends Object> queryProcessInstacesDataByProInsIdApi( Set<String> processInstIds );
+
+    /**
+     * 根据流程定义KEY查询流程实例信息  多个
+     * @param processDefKey    流程实例ID
+     * @return
+     */
+    List<? extends Object> queryProcessInstacesDataByProDefKeyApi( String processDefKey );
+
+    /**
+     * 根据流程活动状态查询流程实例信息  多个
+     * @return
+     */
+    List<? extends Object> queryProcessInstacesDataByActiveApi();
+
+    /**
+     * 根据流程活动状态查询流程实例信息  多个
+     * @param proBusinessKey       流程业务主键key
+     * @return
+     */
+    List<? extends Object> queryProcessInstacesDataByActiveApi(String proBusinessKey);
+
+    /**
+     * 根据流程实例ID查询流程是否结束
+     * @param processInstanceId     流程实例ID
+     * @return
+     */
+    boolean queryProcessInstaceEndStateByProInsIdApi(String processInstanceId);
 }

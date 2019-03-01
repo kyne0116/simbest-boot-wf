@@ -68,4 +68,11 @@ public interface IWfOptMsgService {
      * @return
      */
      int updateOptMsgByProInsIdWorkItemId ( Long processInstId, Long workItemId );
+
+    /**
+     * 根据任务ID添加任务审批意见
+     * @param workItemMsg       参数
+     * @return
+     */
+     int submitApprovalMsg(Map<String,Object> workItemMsg);
 }
