@@ -75,4 +75,11 @@ public interface IWfOptMsgService {
      * @return
      */
      int submitApprovalMsg(Map<String,Object> workItemMsg);
+
+    /**
+     * 查询流程审批意见
+     * @param queryParam       查询参数
+     * @return
+     */
+     List<?> queryComments(Map<String,Object> queryParam);
 }

@@ -151,4 +151,12 @@ public interface IWorkItemService {
      * @return
      */
     int updateOptMsgByProInsIdWorkItemId ( Long processInstId, Long workItemId );
+
+    /**
+     * 领取任务  （Activity6）
+     * @param taskId        任务ID
+     * @param userId        领取人
+     * @return
+     */
+    int claim(String taskId,String userId);
 }
