@@ -8,7 +8,9 @@ import java.util.Map;
 
 /**
  * <strong>Title : IProcessTodoDataInfo</strong><br>
- * <strong>Description : 流程待办、已办接口</strong><br>
+ * <strong>
+ *     Description : 流程待办、已办接口、我的草稿、我的申请、我的待阅、我的已阅
+ * </strong><br>
  * <strong>Create on : $date$</strong><br>
  * <strong>Modify on : $date$</strong><br>
  * <strong>Copyright (C) Ltd.</strong><br>
@@ -36,6 +38,13 @@ public interface IProcessTodoDataService {
     Page<?> getTodoByUserNamePage ( Map<? extends Object, ? extends Object> todoUserParam, Pageable pageable );
 
     /**
+     * 获取指定 userName 下面所有的待办办数据(返回为Map类型)
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    Page<Map<String,Object>> getTodoByUserIdPageMap ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
+
+    /**
      * 获取指定 userName 下面所有的已办数据
      * @param doneUserParam         查询已办参数
      * @return
@@ -50,7 +59,7 @@ public interface IProcessTodoDataService {
     Page<?> getAreadyDoneByUserIdSubFlowPage ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
 
     /**
-     * 获取指定 userName 下面所有的已办数据 存在子流程(返回为Map类型)
+     * 获取指定 userName 下面所有的已办数据(返回为Map类型)
      * @param doneUserParam         查询已办参数
      * @return
      */
