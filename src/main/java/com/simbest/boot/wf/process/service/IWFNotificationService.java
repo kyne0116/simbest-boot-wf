@@ -125,4 +125,12 @@ public interface IWFNotificationService {
      * @return
      */
     Object getWFNotificationById(String notificationId);
+
+    /**
+     * 根据流程实例ID和待阅状态查询通知数据
+     * @param processInstId          流程实例ID
+     * @param status                 状态
+     * @return
+     */
+    List<?> findAllByProcessInstIdAndStatusNative(Long processInstId,String status );
 }
