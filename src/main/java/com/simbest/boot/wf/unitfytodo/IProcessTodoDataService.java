@@ -24,11 +24,18 @@ import java.util.Map;
 public interface IProcessTodoDataService {
 
     /**
-     * 分页获取所有待办数据
+     * 分页获取所有待办数据(带分页)
      * @param todoParam   查询待办参数
      * @return
      */
     Page<Map<String,Object>> getAllTodoPage ( Map<? extends Object, ? extends Object> todoParam, Pageable pageable );
+
+    /**
+     * 分页获取所有待办数据(无分页)
+     * @param todoParam   查询待办参数
+     * @return
+     */
+    List<Map<String,Object>> getAllTodoNoPage ( Map<? extends Object, ? extends Object> todoParam);
 
     /**
      * 获取指定 userName 下面所有的待办数据
