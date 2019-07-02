@@ -31,6 +31,14 @@ public interface IProcessTodoDataService {
     Page<Map<String,Object>> getAllTodoPage ( Map<? extends Object, ? extends Object> todoParam, Pageable pageable );
 
     /**
+     * 查询应用中所有指定人申请的待办数据
+     * @param todoParam
+     * @param pageable
+     * @return
+     */
+    Page<Map<String, Object>> getMyCreateAllTodoPage ( Map<? extends Object, ? extends Object> todoParam, Pageable pageable );
+
+    /**
      * 分页获取所有待办数据(无分页)
      * @param todoParam   查询待办参数
      * @return
