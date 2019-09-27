@@ -148,4 +148,11 @@ public interface IProcessTodoDataService {
      * @return
      */
     List<?> queryActBusinessStatusByProInsId( Long processInstId)throws Exception;
+
+    /**
+     * 查询业务系统中所有正在办理的工单数据-无分页 供统一待办对账查询使用
+     * @return
+     * @throws Exception
+     */
+    List<Map<String, Object>> getAllTodoByManagerNoPage() throws Exception;
 }
