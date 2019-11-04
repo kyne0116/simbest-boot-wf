@@ -113,6 +113,13 @@ public interface IWFNotificationService {
     Object getNotificationByPmInsIdAndRecipient ( String pmInstId, String recipient );
 
     /**
+     * 根据ID获取通知数据
+     * @param id        主键ID
+     * @return
+     */
+    Object getNotificationById( String id );
+
+    /**
      * 根据ID根据最后环节已阅的的意见
      * @param notificationId       通知ID
      * @param content              意见
