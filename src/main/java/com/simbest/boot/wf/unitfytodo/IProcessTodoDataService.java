@@ -61,6 +61,13 @@ public interface IProcessTodoDataService {
     Page<?> getTodoByUserNamePage ( Map<? extends Object, ? extends Object> todoUserParam, Pageable pageable );
 
     /**
+     * 获取指定 userName 下面所有的待办数据  无分页
+     * @param todoUserParam        查询待办参数
+     * @return
+     */
+    List<?> getTodoByUserNameNoPage ( Map<? extends Object, ? extends Object> todoUserParam );
+
+    /**
      * 获取指定 userName 下面所有的待办办数据(返回为Map类型)
      * @param doneUserParam         查询已办参数
      * @return
