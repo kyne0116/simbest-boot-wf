@@ -88,6 +88,14 @@ public interface IProcessTodoDataService {
      */
     Page<?> getAreadyDoneByUserIdSubFlowPage ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
 
+
+    /**
+     * 获取指定 userName 下面所有的已办数据,无分页 存在子流程
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    List<?> getAreadyDoneByUserIdSubFlowNoPage ( Map<? extends Object, ? extends Object> doneUserParam );
+
     /**
      * 获取指定 userName 下面所有的已办数据(返回为Map类型)
      * @param doneUserParam         查询已办参数
