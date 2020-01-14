@@ -30,4 +30,12 @@ public interface IActivityManagerService {
      *                                      simple 简单回退
      */
     boolean backProcessActivityByWorkItemId (Long processInstId, Long currWorkItemID, Long destWorkItemID, String rollBackStrategy );
+
+    /**
+     *  撤销当前流程工作项
+     * @param processInstId             当前环节工作项ID
+     * @param currWorkItemID            回退到的目标活动定义ID
+     * @return
+     */
+    boolean undoProcessByByWorkItemId(Long processInstId, Long currWorkItemID);
 }
