@@ -75,6 +75,20 @@ public interface IProcessTodoDataService {
     Page<Map<String,Object>> getTodoByUserIdPageMap ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
 
     /**
+     * 获取指定 userName 下面所有的待办办数据无分页(返回为Map类型)
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    List<Map<String,Object>> getTodoByUserIdNoPageMap ( Map<? extends Object, ? extends Object> doneUserParam );
+
+    /**
+     * 获取指定 userName 下面涉及的所有文种(返回为Map类型)
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    List<Map<String,Object>> getTodoByUserIdGroupMap ( Map<? extends Object, ? extends Object> doneUserParam );
+
+    /**
      * 获取指定 userName 下面所有的已办数据
      * @param doneUserParam         查询已办参数
      * @return
@@ -102,6 +116,21 @@ public interface IProcessTodoDataService {
      * @return
      */
     Page<Map<String,Object>> getAreadyDoneByUserIdPageMap ( Map<? extends Object, ? extends Object> doneUserParam, Pageable pageable );
+
+    /**
+     * 获取指定 userName 已办下面所有的待办数据无分页(返回为Map类型)
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    List<Map<String,Object>> getAreadyDoneByUserIdNoPageMap ( Map<? extends Object, ? extends Object> doneUserParam );
+
+
+    /**
+     * 获取指定 userName 已办下面涉及的所有文种(返回为Map类型)
+     * @param doneUserParam         查询已办参数
+     * @return
+     */
+    List<Map<String,Object>> getAreadyDoneByUserIdGroupMap ( Map<? extends Object, ? extends Object> doneUserParam );
 
     /**
      * 获取指定 userName 下面所有的创建的工单数据
