@@ -65,6 +65,13 @@ public interface IWorkItemService {
     List<?> queryWorkTtemDataByProInsId ( long processInsId );
 
     /**
+     * 根据流程实例ID查询工作项信息  流程跟踪  Flowable使用
+     * @param processInsId        流程实例ID
+     * @return
+     */
+    List<?> queryWorkTtemDataByProInsId ( Object processInsId );
+
+    /**
      * 根据流程实例ID查询流程跟踪(wfmg在用)
      * @param processInstId     流程实例ID
      * @param workItemId        工作项ID
