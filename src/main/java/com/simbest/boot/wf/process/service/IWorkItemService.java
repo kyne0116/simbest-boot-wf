@@ -35,6 +35,16 @@ public interface IWorkItemService {
     int finishWorkTaskWithRelativeData ( Map<String, Object> param);
 
     /**
+     * 功能描述:  根据环节配置的属性进行流转下一步
+     *
+     * @param
+     * @return
+     * @date 2020/2/29 11:43
+     * @auther ljw
+     */
+    int finshTaskWithComplete(Map<String,Object> nextParam);
+
+    /**
      * 提交流程审批意见
      * @param workItemId            工作项ID
      * @param approvalMsg           审批意见信息
