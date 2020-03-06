@@ -1,5 +1,7 @@
 package com.simbest.boot.wf.process.service;
 
+import org.apache.poi.ss.formula.functions.T;
+
 import java.util.List;
 import java.util.Map;
 
@@ -95,6 +97,13 @@ public interface IWorkItemService {
      * @return
      */
     List<Map<String,Object>> queryWorkITtemDataMap ( Map<String,Object> paramMap);
+
+    /**
+     * 根据流程实例ID查询工作项信息  流程跟踪
+     * @param paramMap      参数
+     * @return
+     */
+    Object queryTaskDataMap ( Map<String,Object> paramMap);
 
     /**
      * 根据流程实例ID查询工作项信息(包含主流程和所有子流程数据)  流程跟踪
