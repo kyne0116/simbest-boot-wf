@@ -185,4 +185,14 @@ public interface IWorkItemService {
      * @return
      */
     int claim(String taskId,String userId);
+
+    /**
+     * 功能描述:查询正在运行中的任务实例
+     *
+     * @param 
+     * @return 
+     * @date 2020/4/3 11:58
+     * @auther Administrator
+     */
+    List<?> queryRunningTaskInstModelByProcessInstId(Map<String,Object> processParam);
 }
