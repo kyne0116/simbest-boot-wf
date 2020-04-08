@@ -199,4 +199,14 @@ public interface IProcessTodoDataService {
      * @throws Exception
      */
     List<Map<String, Object>> getAllTodoByManagerNoPage() throws Exception;
+
+    /**
+     * 功能描述: 根据流程实例ID更新更新标题信息
+     *
+     * @param
+     * @return
+     * @date 2020/2/20 11:51
+     * @auther ljw
+     */
+    int updateTitleByProcessInstById(Map<? extends Object, ? extends Object> paramMap);
 }
