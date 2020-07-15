@@ -61,6 +61,14 @@ public interface IWorkItemService {
      */
     int reassignWorkItem(long workItemId,List<Object> reassignUsers);
 
+
+    /**
+     * 将工作项改派给置顶的参与者，可以改派给多个人（activity）
+     * @param map
+     * @return
+     */
+    int reassignWorkByActivity(Map<String , Object> map);
+
     /**
      * 根据流程实例ID，流程活动实例ID，查询流程工作项信息
      * @param processInstID     流程实例ID
@@ -195,4 +203,25 @@ public interface IWorkItemService {
      * @auther Administrator
      */
     List<?> queryRunningTaskInstModelByProcessInstId(Map<String,Object> processParam);
+
+    /**
+     * 结束工作项（activity，仅仅只限于多实例）
+     * @param processParam
+     */
+    void endTask(Map<String , Object> processParam);
+
+    /**
+     * 补发 : 从唯一环节补发到其他环节（activity使用）
+     * @param paramMap
+     * @return
+     */
+    Map<String , Object> reissueProcess(Map<String, Object> paramMap);
+
+
+    /**
+     * 回滚：回滚该环节及其以下所有环节至该环节的上一环节 （activity使用）
+     * @param paramMap
+     * @return
+     */
+    Map<String , Object> processGoBack(Map<String , Object> paramMap);
 }

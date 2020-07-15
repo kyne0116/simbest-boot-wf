@@ -209,4 +209,16 @@ public interface IProcessTodoDataService {
      * @auther ljw
      */
     int updateTitleByProcessInstById(Map<? extends Object, ? extends Object> paramMap);
+
+    /**
+     * 根据业务流程定义id获取该流程所有的待办信息并分页
+     * @param page  页码
+     * @param rows  行数
+     * @param boProcessDefId   业务流程实例id
+     * @param userName        当前办理人
+     * @param businessTitle   标题
+     * @return
+     */
+    Page<Map<String , Object>> getAllByBoProcessDefId(int page , int rows , String boProcessDefId , String userName , String businessTitle);
+
 }
