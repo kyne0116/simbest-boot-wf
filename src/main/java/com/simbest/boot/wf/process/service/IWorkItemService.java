@@ -224,4 +224,11 @@ public interface IWorkItemService {
      * @return
      */
     Map<String , Object> processGoBack(Map<String , Object> paramMap);
+
+    /**
+     * 获取当前环节出去的连线
+     * @param taskId    任务ID
+     * @return
+     */
+    List<Map<String,Object>> getNextFlowNodes(String taskId);
 }
