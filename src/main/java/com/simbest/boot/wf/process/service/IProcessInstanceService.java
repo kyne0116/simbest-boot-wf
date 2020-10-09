@@ -196,5 +196,5 @@ public interface IProcessInstanceService {
      * @param processInstId  流程实例id
      * @return
      */
-    Boolean checkIsLastVersion(String processInstId) ;
+    Map<String , Object> checkIsLastVersion(String processInstId) ;
 }
