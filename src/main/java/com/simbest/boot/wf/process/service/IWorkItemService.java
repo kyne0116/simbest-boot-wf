@@ -231,4 +231,11 @@ public interface IWorkItemService {
      * @return
      */
     List<Map<String,Object>> getNextFlowNodes(String taskId);
+
+    /**
+     * 根据流程环节定义ID查询运行状态下的工作项信息
+     * @param activityDefId     环节定义ID
+     * @return
+     */
+    List<?> queryWorkItemByProInstIdAndAcdefId(String activityDefId);
 }
